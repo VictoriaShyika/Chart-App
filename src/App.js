@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Chart from "chart.js/auto";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import ChartType from "./components/ChartType";
+import RadioForm from "./components/RadioForm";
+import InputForm from "./components/InputForm";
 
 function App() {
+  const [lables, setLables] = useState([
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+  ]);
+  const [data, setData] = useState([1, 5, 10, 1, 2]);
+  const [type, setType] = useState("bar");
+
+  const onChangeLables = (e) => {
+    setLables(e.target.value.split(", "));
+  };
+  const onChangeData = (e) => {
+    setData(e.target.value.split(", ").map((str) => Number(str)));
+  };
+  const onChangeValue = (e) => {
+    setType(e.target.value);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App vh-100">
+      <InputForm
+        onChangeLables={onChangeLables}
+        onChangeData={onChangeData}
+      />
+      <ChartType lables={lables} data={data} type={type} />
+      <RadioForm type={type} onChange={onChangeValue} />
     </div>
   );
 }
