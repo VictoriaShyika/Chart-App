@@ -9,7 +9,7 @@ const InputForm = (props) => {
         <Input
           type="text"
           id="X-axis"
-          onChange={props.onChangeLables}
+          onChangeField={props.onChangeLables}
         ></Input>
       </div>
       <div>
@@ -17,7 +17,7 @@ const InputForm = (props) => {
         <Input
           type="text"
           id="Y-axis"
-          onChange={props.onChangeData}
+          onChangeField={props.onChangeData}
         ></Input>
       </div>
     </form>
