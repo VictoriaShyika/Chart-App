@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/chart-app/static/css/main.fd6f2ccd.css",
-    "main.js": "/chart-app/static/js/main.1015212b.js",
-    "index.html": "/chart-app/index.html",
-    "main.fd6f2ccd.css.map": "/chart-app/static/css/main.fd6f2ccd.css.map",
-    "main.1015212b.js.map": "/chart-app/static/js/main.1015212b.js.map"
+    "main.css": "/Chart-App/static/css/main.fd6f2ccd.css",
+    "main.js": "/Chart-App/static/js/main.1015212b.js",
+    "index.html": "/Chart-App/index.html",
+    "main.fd6f2ccd.css.map": "/Chart-App/static/css/main.fd6f2ccd.css.map",
+    "main.1015212b.js.map": "/Chart-App/static/js/main.1015212b.js.map"
   },
   "entrypoints": [
     "static/css/main.fd6f2ccd.css",
