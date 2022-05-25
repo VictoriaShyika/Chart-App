@@ -18,7 +18,7 @@ const RadioForm = (props) => {
       </div>
 
       {CHART_TYPE.map((type) => (
-        <div>
+        <div key={type}>
           <RadioInput id={type} value={type} onChange={props.onChange} />
           <RadioLable htmlFor={type}>{type} Chart</RadioLable>
         </div>
