@@ -2,28 +2,27 @@ import React from "react";
 import RadioInput from "./UI/RadioInput";
 import RadioLable from "./UI/RadioLable";
 
+const CHART_TYPE = ["Line", "PolarArea", "Doughnut"];
+
 const RadioForm = (props) => {
   return (
     <div className="form-radio">
       <div>
         <RadioInput
           id="Bar"
-          value="bar"
-          checked={props.type === "bar"}
+          value="Bar"
+          checked={props.type === "Bar"}
           onChange={props.onChange}
         />
         <RadioLable htmlFor="Bar">Bar Chart</RadioLable>
       </div>
 
-      <div>
-        <RadioInput id="Line" value="line" onChange={props.onChange} />
-        <RadioLable htmlFor="Line">Line Chart</RadioLable>
-      </div>
-
-      <div>
-        <RadioInput id="PolarArea" value="polarArea" onChange={props.onChange} />
-        <RadioLable htmlFor="PolarArea">Polar Area Chart</RadioLable>
-      </div>
+      {CHART_TYPE.map((type) => (
+        <div>
+          <RadioInput id={type} value={type} onChange={props.onChange} />
+          <RadioLable htmlFor={type}>{type} Chart</RadioLable>
+        </div>
+      ))}
     </div>
   );
 };

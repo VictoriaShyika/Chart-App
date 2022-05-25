@@ -15,7 +15,7 @@ function App() {
     "May",
   ]);
   const [data, setData] = useState([1, 5, 10, 1, 2]);
-  const [type, setType] = useState("bar");
+  const [type, setType] = useState("Bar");
 
   const onChangeLables = (e) => {
     setLables(e.target.value.split(",").map((str) => str.trim()));

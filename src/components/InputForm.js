@@ -14,7 +14,7 @@ const InputForm = (props) => {
         ></Input>
       </div>
       <div>
-        <label htmlFor="Y-axis">Y axis lables:</label>
+        <label className="pt-2" htmlFor="Y-axis">Y axis lables:</label>
         <Input
           type="text"
           id="Y-axis"

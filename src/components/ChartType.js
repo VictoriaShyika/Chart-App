@@ -1,7 +1,5 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
-import { PolarArea } from "react-chartjs-2";
-import { Bar } from "react-chartjs-2";
+import { Doughnut, Line, Bar, PolarArea} from "react-chartjs-2";
 
 const ChartType = (props) => {
   const lineChartData = {
@@ -38,7 +36,7 @@ const ChartType = (props) => {
     },
   };
 
-  if (props.type === "polarArea") {
+  if (props.type === "PolarArea" || props.type === "Doughnut") {
     options.plugins.legend.display = true;
   }
 
@@ -46,9 +44,10 @@ const ChartType = (props) => {
     <div className="chart" style={{ margin: "50px" }}>
       {
         {
-          bar: <Bar data={lineChartData} options={options} />,
-          line: <Line data={lineChartData} options={options} />,
-          polarArea: <PolarArea data={lineChartData} options={options} />,
+          Bar: <Bar data={lineChartData} options={options} />,
+          Line: <Line data={lineChartData} options={options} />,
+          PolarArea: <PolarArea data={lineChartData} options={options} />,
+          Doughnut: <Doughnut data={lineChartData} options={options} />,
         }[props.type]
       }
     </div>
