@@ -18,11 +18,13 @@ function App() {
   const [type, setType] = useState("bar");
 
   const onChangeLables = (e) => {
-    setLables(e.target.value.split(", "));
+    setLables(e.target.value.split(",").map((str) => str.trim()));
   };
   const onChangeData = (e) => {
-    setData(e.target.value.split(", ").map((str) => Number(str)));
+    setData((e.target.value.split(",").map((str) => Number(str.trim()))));
   };
+
+
   const onChangeValue = (e) => {
     setType(e.target.value);
   };
@@ -33,7 +35,7 @@ function App() {
         onChangeLables={onChangeLables}
         onChangeData={onChangeData}
       />
-      <ChartType lables={lables} data={data} type={type} />
+      <ChartType lables={lables} data={data.slice(0, lables.length)} type={type} />
       <RadioForm type={type} onChange={onChangeValue} />
     </div>
   );

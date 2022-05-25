@@ -10,6 +10,7 @@ const InputForm = (props) => {
           type="text"
           id="X-axis"
           onChangeField={props.onChangeLables}
+          onBlur={props.onChangeLables}
         ></Input>
       </div>
       <div>
@@ -18,6 +19,8 @@ const InputForm = (props) => {
           type="text"
           id="Y-axis"
           onChangeField={props.onChangeData}
+          onBlur={props.onChangeData}
+
         ></Input>
       </div>
     </form>

@@ -22,7 +22,7 @@ const RadioForm = (props) => {
 
       <div>
         <RadioInput id="PolarArea" value="polarArea" onChange={props.onChange} />
-        <RadioLable htmlFor="PolarArea">PolarArea Chart</RadioLable>
+        <RadioLable htmlFor="PolarArea">Polar Area Chart</RadioLable>
       </div>
     </div>
   );

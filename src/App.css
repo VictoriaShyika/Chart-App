@@ -2,6 +2,7 @@
   background-color: #f5f5f5;
   justify-content: center;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 .inputForm {
   padding-top: 25px;
