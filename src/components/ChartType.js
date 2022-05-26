@@ -41,7 +41,7 @@ const ChartType = (props) => {
   }
 
   return (
-    <div className="chart" style={{ margin: "50px" }}>
+    <div className="chart" style={{ marginTop: "30px" }}>
       {
         {
           Bar: <Bar data={lineChartData} options={options} />,

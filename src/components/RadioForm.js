@@ -6,7 +6,7 @@ const CHART_TYPE = ["Line", "PolarArea", "Doughnut"];
 
 const RadioForm = (props) => {
   return (
-    <div className="form-radio">
+    <div className="form-radio" style={{ marginTop: "30px" }}>
       <div>
         <RadioInput
           id="Bar"
